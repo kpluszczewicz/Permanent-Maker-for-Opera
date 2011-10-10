@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html>
+<head>
+	<title>Permanent maker - prefe</title>
+	<meta charset="UTF-8" />
+	<link type="text/css" rel="stylesheet" href="style/options.css" />
+	<script type="text/javascript" src="script/options.js"></script>
+</head>
+<body>
+	<div id="main">
+		<p class="title">Set preferences:</p>
+		<form>
+			Border color: <input type="color" id="bordercolor" onChange="changeSettings(0)" /><br />
+			Border width (0-5px): <input type="range" id="borderwidth" min="0" max="5" step="1" onChange="changeSettings(1)" /><br />
+			Border radius (0-10px): <input type="range" id="borderradius" min="0" max="10" step="1" onChange="changeSettings(2)" /><br />
+			Primary background color: <input type="color" id="bgcolor" onChange="changeSettings(3)" /><br />
+			Secondary background color: <input type="color" id="sbgcolor" onChange="changeSettings(5)" /><input type="checkbox" id="sbg" onChange="changeSettings(4)" /><br />
+			Background opacity (0-1): <input type="range" id="bgopacity" min="0" max="1" step="0.1" onChange="changeSettings(6)" /><br />
+			Hotkey: <select id="hotkey" onChange="changeSettings(7)"><option>Shift</option><option>Ctrl</option><option>Alt</option></select><br />
+			Random background color: <input type="checkbox" id="randombg" onChange="changeSettings(8)" />
+		</form>
+		<hr />
+		<p class="title">Sample:</p>
+		<div id="sampleholder">
+			<span id="sampletext">some text in the background to see the effect</span>
+			<div id="sample"></div>
+			<div id="sample2"></div>
+		</div>
+		<hr />
+		<p class="title">How to:</p>
+		<ul>
+			<li>Press the hotkey selected above and the left mouse button, then draw the rectangle with your mouse! Click on the rectangle to make it disappear!</li>
+			<li>If <em>secondary background color</em> is checked, a rectangle drawn above another rectangle will get a different background color.</li>
+			<li>If <em>random background color</em> is checked, the primary and secondary background colors will be ignored, and each rectangle will get a random generated background color from a predefined list.</li>
+		</ul>
+		<hr />
+		<p class="title">Credits:</p>
+		<ul>
+			<li>v1.0</li>
+			<li>coded by <strong>Nekomajin</strong>, dedicated to <em>Freely</em></li>
+			<li>support on <a href="http://my.opera.com/Nekomajin/blog" target="_blank">myOpera</a></li>
+			<li>icon from <a href="http://findicons.com/icon/24902/highlighter_blue_01" target="_blank">findicons.com</a> by <a href="http://www.deleket.com/" target="_blank">Jojo Mendoza</a></li>
+		</ul>
+	</div>
+</body>
+</html>

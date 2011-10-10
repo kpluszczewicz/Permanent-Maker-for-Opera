@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+	<script>
+	    window.addEventListener("load", function(){
+		var theButton;
+		var ToolbarUIItemProperties = {
+		    title: "Hello World",
+		    icon: "hello.png",
+		    badge: {
+			display: 'block',
+			backgroundColor: '#5566ff',
+			color: '#ffffff',
+			textContent: '0'
+		    }
+		}
+		theButton = opera.contexts.toolbar.createItem(ToolbarUIItemProperties);
+		opera.contexts.toolbar.addItem(theButton);
+
+		var i = 1;
+		theButton.addEventListener('click', handleClick, false);
+
+		function handleClick() {
+		    var badgeText = (i>5) ? '555' : i;
+
+		    theButton.badge.textContent = badgeText;
+
+		    theButton.title = "You've clicked the button" + i + "time(s)";
+		    i++;
+		}
+	    }, false);
+	</script>
+    </head>
+    <body>
+    </body>
+</html>
